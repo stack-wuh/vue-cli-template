@@ -18,7 +18,7 @@
 
   >>utils 保存工具函数
 
-  >>store
+  >>store vuex文件管理
 
     >>module
 
