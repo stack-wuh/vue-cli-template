@@ -4,43 +4,41 @@
 ### 项目目录
 >publick
 
->src  
+```
+src  
+|—— assets  存放公共的img, font, css文件   
+    |__style 公共的css文件       
+    |__imgs 存放图片文件        
+    |__font 存放字体文件
 
-  >>assets  存放公共的img, font, css文件   
-  
-      >>>style 公共的css文件       
-      >>>imgs 存放图片文件        
-      >>>font 存放字体文件
+|—— components 保存一些公共的业务组件
+    |__utils 保存工具函数
 
-  >> components 保存一些公共的业务组件
+|—— store vuex文件管理        
+    |__module
 
-  >>utils 保存工具函数
+|—— view 视图层全部的网页文件
 
-  >>store vuex文件管理        
-    >>>module
+|—— App.vue
 
-  >>view  视图层全部的网页文件
+|—— main.js
 
-  >>App.vue
+|—— router.js 路由文件
 
-  >>main.js
+|—— store.js vuex文件
 
-  >>router.js 路由文件
+|—— .gitignore git忽略文件
 
-  >>store.js vuex文件
+|—— babel.config.js 插件配置文件
 
->.gitignore git忽略文件
+|—— package.json 包管理文件
 
-> babel.config.js 插件配置文件
+|—— REDAME.md  
 
->package.json 包管理文件
+|—— vue.config.js  vue脚手架配置文件
 
->REDAME.md  
-
->vue.config.js  vue脚手架配置文件
-
->yarn.lock
-
+|—— yarn.lock
+```
 
 ## Project setup
 ```
