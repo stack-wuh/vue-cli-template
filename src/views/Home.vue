@@ -3,6 +3,7 @@
     <MyHeader />
     <section class="body-wrapper">
       <MyAside />
+      <router-view />
       <MyAside />
     </section>
     <MyFooter />
