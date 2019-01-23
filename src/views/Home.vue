@@ -3,7 +3,9 @@
     <MyHeader />
     <section class="body-wrapper">
       <MyAside />
-      <router-view />
+      <section class="router-wrapper">
+        <router-view />
+      </section>
       <MyAside />
     </section>
     <MyFooter />
@@ -30,10 +32,25 @@ export default {
     flex-flow: column nowrap;
 
     .body-wrapper{
+      height: inherit;
       display: flex;
-      align-items: center;
       justify-content: space-between;
       flex:1;
+      .router-wrapper{
+        flex:1;
+        height: inherit;
+
+        overflow-y: scroll;
+
+        &::-webkit-scrollbar{
+          width: 5px;
+          height: 1px;
+        }
+        &::-webkit-scrollbar-thumb{
+          box-shadow: 0 0 5px inset rgba(132,31,222,.26);
+          border-radius: 4px;
+        }
+      }
     }
   }
 </style>
