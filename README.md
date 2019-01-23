@@ -2,7 +2,7 @@
 基于ElementUI的vue项目模板, 包含了ElementUI, Axios, Sass
 
 ### 项目目录
->publick
+>public
 
 ```
 src  
