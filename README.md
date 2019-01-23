@@ -6,21 +6,17 @@
 
 >src  
 
-  >>assets  存放公共的img, font, css文件
-
-    >> style 公共的css文件
-
-    >> imgs 存放图片文件
-
-    >> font 存放字体文件
+  >>assets  存放公共的img, font, css文件               
+      >>>style 公共的css文件       
+      >>>imgs 存放图片文件        
+      >>>font 存放字体文件
 
   >> components 保存一些公共的业务组件
 
   >>utils 保存工具函数
 
-  >>store vuex文件管理
-
-    >>module
+  >>store vuex文件管理        
+    >>>module
 
   >>view  视图层全部的网页文件
 
