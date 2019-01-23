@@ -6,7 +6,8 @@
 
 >src  
 
-  >>assets  存放公共的img, font, css文件               
+  >>assets  存放公共的img, font, css文件   
+  
       >>>style 公共的css文件       
       >>>imgs 存放图片文件        
       >>>font 存放字体文件
