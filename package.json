@@ -2,12 +2,17 @@
   "name": "shop",
   "version": "0.1.0",
   "private": true,
+  "author": "shadow <https://www.github.com/stack-wuh>",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "axios": "^0.18.0",
+    "babel-plugin-component": "^1.1.1",
+    "compression-webpack-plugin": "^2.0.0",
+    "element-ui": "^2.4.11",
     "vue": "^2.5.21",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1"
