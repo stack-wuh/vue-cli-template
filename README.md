@@ -1,6 +1,50 @@
 # vue-cli-template
 基于ElementUI的vue项目模板, 包含了ElementUI, Axios, Sass
 
+### 项目目录
+>publick
+
+>src  
+
+  >>assets  存放公共的img, font, css文件
+
+    >> style 公共的css文件
+
+    >> imgs 存放图片文件
+
+    >> font 存放字体文件
+
+  >> components 保存一些公共的业务组件
+
+  >>utils 保存工具函数
+
+  >>store
+
+    >>module
+
+  >>view  视图层全部的网页文件
+
+  >>App.vue
+
+  >>main.js
+
+  >>router.js 路由文件
+
+  >>store.js vuex文件
+
+>.gitignore git忽略文件
+
+> babel.config.js 插件配置文件
+
+>package.json 包管理文件
+
+>REDAME.md  
+
+>vue.config.js  vue脚手架配置文件
+
+>yarn.lock
+
+
 ## Project setup
 ```
 yarn install
@@ -28,39 +72,3 @@ yarn run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
-
-
-### 项目目录
->publick
-
->src  
-  >>assets
-
-  >> compnents
-
-  >>utils
-
-  >>store
-    >>module
-
-  >>view
-
-  >>App.vue
-
-  >>main.js
-
-  >>router.js
-
-  >>store.js
-
->.gitignore
-
-> babel.config.js
-
->package.jspn
-
->REDAME.md
-
->vue.config.js
-
->yarn.lock
