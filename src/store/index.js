@@ -1,11 +1,9 @@
-const state = {}
-
-const mutations = {}
-
-const actions = {}
-
-const getters = {}
-
-export default {
-  state, mutations, actions, getters
+export const state = {
+  author: 'shadow'
 }
+
+export const mutations = {}
+
+export const actions = {}
+
+export const getters = {}
