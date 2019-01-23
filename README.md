@@ -12,7 +12,8 @@ src
     |__font 存放字体文件
 
 |—— components 保存一些公共的业务组件
-    |__utils 保存工具函数
+
+|__utils 保存工具函数
 
 |—— store vuex文件管理        
     |__module
