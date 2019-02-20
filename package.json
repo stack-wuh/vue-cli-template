@@ -9,6 +9,15 @@
     "dev-test": "vue-cli-service build --mode test",
     "lint": "vue-cli-service lint"
   },
+  "keywords": [
+    "vue",
+    "elementUI",
+    "template"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stack-wuh/vue-cli-template"
+  },
   "dependencies": {
     "axios": "^0.18.0",
     "babel-plugin-component": "^1.1.1",

@@ -14,7 +14,7 @@ module.exports = {
     port: '19020',
     proxy: {
       '/api': {
-        target: 'www.baidu.com',
+        target: process.env.VUE_APP_HTTP,
         changeOrigin: true,
         pathRewrite: {
           '^/api': ''
