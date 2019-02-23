@@ -1,3 +1,6 @@
+@import './function.scss';
+@import './var.scss';
+
 /*
  flex box wrap
  */
@@ -41,5 +44,58 @@
         width: 6px;
       }
     }
+  }
+}
+
+
+
+/*
+ * BEM
+ */
+@mixin b($block) {
+  $B: $namespace + '-' + $block !global;
+  .#{$B} {
+    @content;
+  }
+}
+
+@mixin e($element) {
+  $E: $element !global;
+  $selector: &;
+
+  @if containModifier($selector) {
+    @at-root {
+      #{$selector} {
+        .#{$B + $el-separator + $E} {
+          @content;
+        }
+      }
+    }
+  }
+}
+
+
+@mixin m($modifier) {
+  $selector: &;
+  @at-root {
+    #{$selector + $mo-separator + $modifier} {
+      @content ;
+    }
+  }
+}
+
+
+@mixin when($state) {
+  $selector: &;
+  @at-root {
+    #{$selector}.#{$state-prefix + $state} {
+      @content;
+    }
+  }
+}
+
+@mixin pseudo($pseudo) {
+  @at-root #{&}#{':#{$pseudo}'} {
+    @content;
   }
 }
