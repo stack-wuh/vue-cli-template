@@ -71,7 +71,13 @@
         }
       }
     }
-  }
+  }@else {
+    @at-root {
+      #{$selector + $el-separator + $element} {
+        @content;
+      }
+    }
+  } 
 }
 
 
