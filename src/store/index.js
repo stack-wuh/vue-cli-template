@@ -1,5 +1,8 @@
 export const state = {
-  author: 'shadow'
+  author: 'shadow',
+
+  isShowDialog: true,
+  dialogTitle: '提示'
 }
 
 export const mutations = {}

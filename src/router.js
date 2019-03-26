@@ -19,10 +19,14 @@ export default new Router({
       component: Home,
       children: [
         {
-          path: '/about',
-          component: () => import ('@/views/About')
+          path: '/user',
+          component: () => import ('@/views/userManage/user-list')
         }
       ]
+    },
+    {
+      path: '/signin',
+      component: () => import ('@/views/signin')
     },
   ]
 })

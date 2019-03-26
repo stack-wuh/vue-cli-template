@@ -1,5 +1,8 @@
 <template>
   <section class="wrapper aside-wrapper">
+      <div class="">
+        aside
+      </div>
   </section>
 </template>
 <script>
