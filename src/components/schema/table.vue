@@ -1,5 +1,11 @@
 <template>
   <section class="table-wrapper">
+    <header class="my-table-header">
+      <span class="my-table-header__title">用户列表</span>
+      <div class="my-table-header__right-area">
+        <slot name="right"></slot>
+      </div>
+    </header>
     <el-table :data="list" :border="border" stripe width="100%" :key="Math.random()">
       <el-table-column align="center" :type="tableList.type" :label="tableList.label" fixed="left" width="70"></el-table-column>
       <section  v-for="(item, index) in tableList.list" :key="index">
@@ -67,7 +73,25 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+@import '@/assets/style/color.scss';
+@import '@/assets/style/mixin.scss';
 .table-wrapper{
-  // padding: 20px;
+  @include b(table-header){
+    @include flex($dir: row, $justify: space-between, $align: center);
+    height: 40px;
+    padding: 0 20px;
+    border: 1px solid $border-base;
+    background-color: $b-base;
+    font-size: 14px;
+    @include e(title) {
+      color: $t-999;
+    }
+    @include e(right-area) {
+      @include flex($dir: row-reverse, $align: center);
+      flex: auto;
+      height: inherit;
+      margin-left: 20px;
+    }
+  }
 }
 </style>

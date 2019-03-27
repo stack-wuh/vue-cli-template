@@ -3,7 +3,10 @@
     <el-pagination
       :page-size="pageSize"
       :total="total"
+      :current-page="currPage"
       layout="total, prev, pager, next, jumper"
+      :background="background"
+      @current-change="getCurrentPage"
       ></el-pagination>
   </section>
 </template>
@@ -20,7 +23,16 @@ export default {
       type: Number,
       default: 10,
       required: false
-    }
+    },
+    background: {
+      type: Boolean,
+      default: false
+    },
+    currPage: {
+      type: Number,
+      default: 1,
+      required: true
+    },
   },
   name: '',
   components: {},
@@ -29,7 +41,11 @@ export default {
   data(){
     return {}
   },
-  methods: {},
+  methods: {
+    getCurrentPage(e) {
+      this.$emit('getCurrentPage', e)
+    }
+  },
   created(){},
   mixins:[]
 }
