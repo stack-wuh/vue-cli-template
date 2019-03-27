@@ -21,6 +21,16 @@ export default new Router({
         {
           path: '/user',
           component: () => import ('@/views/userManage/user-list')
+        },
+      ]
+    },
+    {
+      path: '/',
+      component: Home,
+      children: [
+        {
+          path: '/bar',
+          component: () => import('@/components/charts/bar')
         }
       ]
     },
