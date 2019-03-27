@@ -33,7 +33,8 @@
             range-separator="至"
             type="daterange"
             start-placeholder="开始日期"
-            end-placeholder="结束日期"  >
+            end-placeholder="结束日期"
+            value-format="yyyy-MM-dd">
           </el-date-picker>
         </template>
 
@@ -49,8 +50,8 @@
       <li class="flex-empty"></li>
     </ul>
     <div class="my-search-button-area">
-      <el-button size="small" type="primary" icon="el-icon-search">search</el-button>
-      <el-button size="small" type="" icon="el-icon-delete">reset</el-button>
+      <el-button size="small" type="primary" icon="el-icon-search" @click="handleSubmit">search</el-button>
+      <el-button size="small" type="" icon="el-icon-delete" @click="CLEAR_SEARCH_FORM_SYNC">reset</el-button>
     </div>
   </section>
 </template>
@@ -76,10 +77,26 @@
       }),
       searchList(){
         return this.SearchModel[0].list
+      },
+      changePath(){
+        return this.$route.path
       }
     },
-    watch: {},
-    methods: {},
+    watch: {
+      changePath(){
+        this.CLEAR_SEARCH_FORM_SYNC()
+      }
+    },
+    methods: {
+      ...mapMutations(['CLEAR_SEARCH_FORM_SYNC']),
+      /**
+       * [handleSubmit 处理search表单的提交事件]
+       * @return {[type]} [description]
+       */
+      handleSubmit(){
+        console.log(this.searchForm)
+      }
+    },
     created(){},
     mixins:[]
   }

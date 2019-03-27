@@ -1,5 +1,6 @@
 import {
   handleBtnAddClick,
+  handleBtnDelClick
 } from './table.click.js'
 
 export const table = [
@@ -34,7 +35,7 @@ export const table = [
           },
           {
             text: '删除',
-            click: handleBtnAddClick
+            click: handleBtnDelClick
           }
         ]
       }
