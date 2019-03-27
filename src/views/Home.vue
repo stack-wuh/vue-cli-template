@@ -51,7 +51,7 @@ export default {
       .router-wrapper{
         @include scroll-bar;
         flex:1;
-        height: inherit;
+        // height: inherit;
         padding: 20px;
         border-left: 1px solid #eee;
         overflow-y: scroll;

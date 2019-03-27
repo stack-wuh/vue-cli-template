@@ -22,6 +22,10 @@ export default new Router({
           path: '/user',
           component: () => import ('@/views/userManage/user-list')
         },
+        {
+          path: '/user/limit',
+          component: () => import('@/views/userManage/limit')
+        }
       ]
     },
     {

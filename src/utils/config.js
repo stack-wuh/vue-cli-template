@@ -2,6 +2,7 @@ import Vue from 'vue'
 import '@/assets/style/base.scss'
 import '@/assets/style/element/index.css'
 import '@/assets/style/element.scss'
+import '@/assets/iconfont/iconfont.css'
 
 import {
   Button,
@@ -23,7 +24,15 @@ import {
   BreadcrumbItem,
   Switch,
   Upload,
-  DatePicker
+  DatePicker,
+  Checkbox,
+  CheckboxGroup,
+  Dropdown,
+  DropdownMenu,
+  DropdownItem,
+  Tabs,
+  TabPane,
+  Badge
 } from 'element-ui'
 
 Vue.use(Button)
@@ -45,6 +54,14 @@ Vue.use(BreadcrumbItem)
 Vue.use(Switch)
 Vue.use(Upload)
 Vue.use(DatePicker)
+Vue.use(Checkbox)
+Vue.use(CheckboxGroup)
+Vue.use(Dropdown)
+Vue.use(DropdownMenu)
+Vue.use(DropdownItem)
+Vue.use(Tabs)
+Vue.use(TabPane)
+Vue.use(Badge)
 
 Vue.prototype.$ELEMENT = {size: 'small', zIndex: 999999}
 Vue.prototype.$message = Message

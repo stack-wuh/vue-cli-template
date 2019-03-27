@@ -1,6 +1,10 @@
 <template>
   <section class="my-page-bar">
-    <div id="myBar" class="my-bar" :class="'my-bar' + Math.random()"></div>
+    <div
+      id="myBar"
+      class="my-bar"
+      :class="'my-bar' + Math.random()">
+    </div>
   </section>
 </template>
 
@@ -65,12 +69,18 @@
       init(){
           let myChart = echarts.init(document.getElementById('myBar'))
           myChart.setOption({...this.Option, ...ops})
+          console.log('is reset')
+      },
+      resize(){
+        console.log('window is changed')
+        this.init()
       }
     },
     created(){
       setTimeout(() => {
         this.init()
       }, 1000, false)
+      window.addEventListener('resize', this.resize)
     },
     mixins:[]
   }
