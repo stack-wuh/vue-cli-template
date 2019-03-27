@@ -1,13 +1,15 @@
 export const state = {
   author: 'shadow',
 
-  isShowDialog: true,
-  dialogTitle: '提示'
+  isShowDialog: false,
+  dialogTitle: 'Tips',
+
+  searchForm: {},
 }
 
 export const mutations = {
-  DIALOG_CLAOSE_SYNC: (state) => {
-    state.isShowDialog = false
+  DIALOG_CLAOSE_SYNC: (state, status = false) => {
+    state.isShowDialog = status
     state.dialogTitle = '提示内容'
   }
 }

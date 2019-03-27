@@ -1,3 +1,7 @@
+import {
+  handleBtnAddClick,
+} from './table.click.js'
+
 export const table = [
   {
     name: '用户列表',
@@ -25,10 +29,12 @@ export const table = [
         type: 'setting',
         list: [
           {
-            text: '添加'
+            text: '添加',
+            click: handleBtnAddClick
           },
           {
-            text: '删除'
+            text: '删除',
+            click: handleBtnAddClick
           }
         ]
       }
