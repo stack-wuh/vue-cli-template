@@ -11,6 +11,7 @@
 <script>
   import {mapState, mapMutations, mapActions, mapGetters} from 'vuex'
   import ops from './config.js'
+  import {resize} from './mixin/resize'
 
   const Option = {
     color: ['#3398DB'],
@@ -60,7 +61,8 @@
     model: {},
     data (){
       return {
-        Option
+        Option,
+        chart: null
       }
     },
     computed: {},
@@ -69,20 +71,16 @@
       init(){
           let myChart = echarts.init(document.getElementById('myBar'))
           myChart.setOption({...this.Option, ...ops})
-          console.log('is reset')
+          this.chart = myChart
       },
-      resize(){
-        console.log('window is changed')
-        this.init()
-      }
     },
     created(){
       setTimeout(() => {
         this.init()
       }, 1000, false)
-      window.addEventListener('resize', this.resize)
+
     },
-    mixins:[]
+    mixins:[resize]
   }
 </script>
 
