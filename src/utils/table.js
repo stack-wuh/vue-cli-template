@@ -40,5 +40,58 @@ export const table = [
         ]
       }
     ],
+  },
+  {
+    name: '广告商列表',
+    params: ['广告商列表'],
+    type: 'index',
+    label: '序号',
+    list: [
+      {
+        label: '账户名',
+        type: '',
+        field: ''
+      },
+      {
+        label: '联系人姓名',
+        type: '',
+        field: ''
+      },
+      {
+        label: '公司名称',
+        type: '',
+        field: ''
+      },
+      {
+        label: '添加时间',
+        type: '',
+        field: ''
+      },
+      {
+        label: '最新编辑时间',
+        type: '',
+        field: ''
+      },
+      {
+        label: '状态',
+        type: '',
+        field: ''
+      },
+      {
+        label: '管理',
+        type: 'setting',
+        list: [
+          {
+            text: '查看操作日志'
+          },
+          {
+            text: '登录当前账户'
+          },
+          {
+            text: '编辑'
+          }
+        ]
+      },
+    ]
   }
 ]

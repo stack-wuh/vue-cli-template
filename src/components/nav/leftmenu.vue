@@ -3,7 +3,7 @@
     <el-menu
       class="my-page-leftmenu__el-menu"
       :unique-opened="true"
-      router-link>
+      router>
       <el-submenu
         v-for="(item, index) in subMenuList"
         :key="item.name + index"
@@ -24,7 +24,8 @@
       <el-menu-item
         v-for="(item, index) in menuItemList"
         :key="item.name + index"
-        :index ="item.name + index">
+        :index ="item.name + index"
+        :route="{path: item.path, query: item.query}">
         <i :class="item.icon" class="el-icon-menu"></i>
         <span>{{item.name}}</span>
       </el-menu-item>

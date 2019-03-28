@@ -141,6 +141,12 @@ const menu = [
       icon: 'icon-shezhi',
       path: '/manage/account',
       query: {l: '账号管理', f: '账号管理'}
+    },
+    {
+      name: '广告商管理',
+      icon: 'icon-shezhi',
+      path: '/list',
+      query: {l: '广告商管理'}
     }
 ]
 

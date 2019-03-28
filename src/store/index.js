@@ -7,6 +7,12 @@ export const state = {
   searchForm: {
     pageNum: 1
   },
+
+  tableData: [
+    {},{},{}
+  ],
+  total: 11,
+  currPageNum: 1
 }
 
 export const mutations = {

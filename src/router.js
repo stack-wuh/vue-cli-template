@@ -25,6 +25,10 @@ export default new Router({
         {
           path: '/user/limit',
           component: () => import('@/views/userManage/limit')
+        },
+        {
+          path: '/list',
+          component: () => import('@/views/tableManage/list')
         }
       ]
     },
