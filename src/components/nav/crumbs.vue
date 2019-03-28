@@ -10,6 +10,7 @@
 
 <script>
   export default {
+    name: 'LayoutCrumbs',
     components: {},
     props: {},
     model: {},

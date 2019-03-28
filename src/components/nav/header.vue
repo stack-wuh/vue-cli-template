@@ -50,7 +50,7 @@ import {
 } from '@/utils/mixin'
 export default {
   props: {},
-  name: '',
+  name: 'LayoutHeader',
   components: {},
   computed: {},
   data(){

@@ -35,6 +35,7 @@
 <script>
 import Menu from '@/utils/menu'
   export default {
+    name: 'LayoutLeftmenu',
     components: {},
     props: {},
     model: {},

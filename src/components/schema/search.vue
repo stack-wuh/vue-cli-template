@@ -60,6 +60,7 @@
   import {mapState, mapMutations, mapActions, mapGetters} from 'vuex'
   import SearchModel from '@/utils/search.js'
   export default {
+    name: 'MySearch',
     components: {
       SearchModel
     },

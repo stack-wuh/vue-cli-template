@@ -10,7 +10,7 @@
 import {mapState, mapActions, mapGetters, mapMutations} from 'vuex'
 export default {
   props: {},
-  name: '',
+  name: 'LayoutFooter',
   components: {},
   computed: {},
   data(){

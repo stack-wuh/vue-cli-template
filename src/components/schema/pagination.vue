@@ -13,6 +13,7 @@
 <script>
 import {mapState, mapActions, mapGetters, mapMutations} from 'vuex'
 export default {
+  name: 'MyPagination',
   props: {
     total: {
       type: Number,

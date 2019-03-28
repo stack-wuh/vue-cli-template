@@ -20,6 +20,7 @@
             <el-button
               v-if="item && item.list"
               v-for="(btn, bid) in item.list"
+              :key="'b' + bid"
               type="text"
               @click="btn.click({$router: $router, $route: $route, query: $route.query, btn, params: scope.row})"
               >{{btn.text}}</el-button>
@@ -53,7 +54,7 @@ export default {
       required: false
     }
   },
-  name: '',
+  name: 'MyTable',
   components: {},
   computed: {
     query(){

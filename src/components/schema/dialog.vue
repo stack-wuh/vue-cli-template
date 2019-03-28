@@ -71,6 +71,7 @@
   import {Toast} from '@/utils/global'
   import FormModel from '@/utils/form'
   export default {
+    name: 'myDialogForm',
     components: {},
     props: {},
     model: {},
