@@ -36,3 +36,9 @@ export const handleBtnDelClick = (...argus) => {
     })
   })
 }
+
+export const handleBtnDtlClick = (...argus) => {
+  setTimeout(() => {
+    router.push({path: '/list/dtl'})
+  }, 300)
+}

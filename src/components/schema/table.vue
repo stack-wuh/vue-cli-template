@@ -1,7 +1,7 @@
 <template>
   <section class="table-wrapper">
     <header class="my-table-header">
-      <span class="my-table-header__title">用户列表</span>
+      <span class="my-table-header__title">{{params || '用户列表'}}</span>
       <div class="my-table-header__right-area">
         <slot name="right"></slot>
       </div>
@@ -77,6 +77,10 @@ export default {
 @import '@/assets/style/color.scss';
 @import '@/assets/style/mixin.scss';
 .table-wrapper{
+  margin-bottom: 20px;
+  &:last-of-type {
+    margin-bottom: none;
+  }
   @include b(table-header){
     @include flex($dir: row, $justify: space-between, $align: center);
     height: 40px;

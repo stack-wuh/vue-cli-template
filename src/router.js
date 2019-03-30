@@ -29,6 +29,10 @@ export default new Router({
         {
           path: '/list',
           component: () => import('@/views/tableManage/list')
+        },
+        {
+          path: '/list/dtl',
+          component: () => import('@/views/tableManage/listDtls/index')
         }
       ]
     },

@@ -1,6 +1,7 @@
 import {
   handleBtnAddClick,
-  handleBtnDelClick
+  handleBtnDelClick,
+  handleBtnDtlClick
 } from './table.click.js'
 
 export const table = [
@@ -36,6 +37,10 @@ export const table = [
           {
             text: '删除',
             click: handleBtnDelClick
+          },
+          {
+            text: '查看详情',
+            click: handleBtnDtlClick
           }
         ]
       }
@@ -93,5 +98,76 @@ export const table = [
         ]
       },
     ]
-  }
+  },
+  {
+    name: '退货商品',
+    params: ['退货商品'],
+    type: 'index',
+    label: '序号',
+    list: [
+      {
+        label: '商品编号',
+        type: 'default',
+        field: '',
+      },
+      {
+        label: '商品名称',
+        type: 'default',
+        field: '',
+      },
+      {
+        label: '商品条码',
+        type: 'default',
+        field: '',
+      },
+      {
+        label: '单价',
+        type: 'default',
+        field: '',
+      },
+      {
+        label: '数量(件)',
+        type: 'default',
+        field: '',
+      },
+      {
+        label: '金额',
+        type: 'default',
+        field: '',
+      }
+    ]
+  },
+  {
+    name: '退货进度',
+    params: ['退货进度'],
+    type: 'index',
+    label: '序号',
+    list: [
+      {
+        label: '时间',
+        type: 'default',
+        field: '',
+      },
+      {
+        label: '当前进度',
+        type: 'default',
+        field: '',
+      },
+      {
+        label: '状态',
+        type: 'default',
+        field: '',
+      },
+      {
+        label: '操作员ID',
+        type: 'default',
+        field: '',
+      },
+      {
+        label: '耗时',
+        type: 'default',
+        field: '',
+      }
+    ]
+  },
 ]
