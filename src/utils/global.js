@@ -1,5 +1,4 @@
 import {Message} from 'element-ui';
-import router from '../router.js'
 
 /**
  * [_toast 全局的toast方法]
@@ -31,6 +30,7 @@ export const ObjNotNull = obj => {
   }
   return _obj
 }
+
 
 export default {
   Toast,

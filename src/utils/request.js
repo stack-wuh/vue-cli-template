@@ -30,7 +30,6 @@ service.interceptors.request.use(
     setTimeout(() => {
       loadingInstance.close()
     })
-    console.error(error)
     Promise.reject(error)
   }
 )
@@ -56,7 +55,6 @@ service.interceptors.response.use(
     }
   },
   error => {
-    console.error(error)
     loadingInstance.close()
     Message({
       message: error,

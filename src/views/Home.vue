@@ -4,14 +4,12 @@
     <section class="body-wrapper">
       <leftmenu></leftmenu>
       <section class="router-wrapper">
-        <my-crumbs></my-crumbs>
-        <transition name="fade">
-          <router-view />
-        </transition>
+        <transition-group name="fade">
+          <my-crumbs key="lb-1" v-if="canShowCrubms"></my-crumbs>
+          <router-view key="lb-2"></router-view>
+        </transition-group>
       </section>
-      <MyAside />
     </section>
-    <MyFooter />
 
     <my-dialog></my-dialog>
   </div>
@@ -25,7 +23,7 @@ import Leftmenu from '@/components/nav/leftmenu'
 import MyCrumbs from '@/components/nav/crumbs'
 import MyDialog from '@/components/schema/dialog'
 export default {
-  name: 'home',
+  name: 'HomePage',
   components: {
     MyHeader,
     MyAside,
@@ -33,11 +31,18 @@ export default {
     Leftmenu,
     MyCrumbs,
     MyDialog
+  },
+  computed: {
+    canShowCrubms(){
+      let { $route: { meta: { crubms } } } = this
+      return (Array.isArray(crubms) && crubms.length)
+    }
   }
 }
 </script>
 <style lang="scss" scoped>
-@import '@/assets/style/mixin.scss';
+  @import '@/assets/style/mixin.scss';
+  @import 'style/transition.scss';
   .home{
     height: inherit;
     display: flex;
@@ -61,7 +66,7 @@ export default {
   .fade-enter-active, .fade-leave-active {
     transition: opacity .5s;
   }
-  .fade-enter, .fade-leave-to {
+  .fade-enter, .fade-leave, .fade-leave-active {
     opacity: 0;
   }
 </style>

@@ -18,7 +18,7 @@
         title: '403',
         desc: '抱歉, 你没有访问页面的权限!',
         text: '返回首页',
-        link: '/index'
+        link: '/'
       }
     },
     props: {},

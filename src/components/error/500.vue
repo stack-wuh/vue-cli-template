@@ -18,7 +18,7 @@
         title: '500',
         desc: '抱歉, 服务器出错误了!',
         text: '返回首页',
-        link: '/index'
+        link: '/'
       }
     },
     props: {},

@@ -35,7 +35,6 @@ export default {
       required: true
     },
   },
-  name: '',
   components: {},
   computed: {},
   filters: {},

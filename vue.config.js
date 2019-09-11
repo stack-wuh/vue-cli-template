@@ -1,5 +1,7 @@
+const path = require('path')
 const CompressionWebpackPlugin = require('compression-webpack-plugin')
 
+const resolve = dir => path.join(__dirname, dir)
 module.exports = {
   lintOnSave: false,
   outputDir: process.env.outputDir,
@@ -22,7 +24,16 @@ module.exports = {
       }
     }
   },
-
+  chainWebpack: config => {
+    config.resolve.alias
+      .set('@@', resolve('src'))
+      .set('style', resolve('src/assets/style'))
+      .set('images', resolve('src/assets/images'))
+      .set('@c', resolve('src/components'))
+      .set('@v', resolve('src/views'))
+      .set('@u', resolve('src/utils'))
+  },
+  // eslint-disable-next-line no-unused-vars
   configureWebpack: config => {
     if(process.env.NODE_ENV === 'production'){
       return {

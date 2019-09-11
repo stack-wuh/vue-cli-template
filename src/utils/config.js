@@ -32,7 +32,8 @@ import {
   DropdownItem,
   Tabs,
   TabPane,
-  Badge
+  Badge,
+  Card
 } from 'element-ui'
 
 Vue.use(Button)
@@ -62,6 +63,7 @@ Vue.use(DropdownItem)
 Vue.use(Tabs)
 Vue.use(TabPane)
 Vue.use(Badge)
+Vue.use(Card)
 
 Vue.prototype.$ELEMENT = {size: 'small', zIndex: 999999}
 Vue.prototype.$message = Message

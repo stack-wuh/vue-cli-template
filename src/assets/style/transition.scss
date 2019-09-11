@@ -1,0 +1,10 @@
+@import './var.scss';
+
+.rotate-vert-left {
+  -webkit-animation: rotate-vert-left .5s cubic-bezier(.645, .045, .355, 1) both;
+  animation: rotate-vert-left .5s cubic-bezier(.645, .045, .355, 1) both;
+}
+
+.slide-left {
+  animation: slide-left .5s cubic-bezier(0.075, 0.82, 0.165, 1) both;
+}

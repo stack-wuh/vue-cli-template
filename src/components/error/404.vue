@@ -18,7 +18,7 @@
         title: '404',
         desc: '抱歉, 你访问的页面不存在!',
         text: '返回首页',
-        link: '/index'
+        link: '/'
       }
     },
     props: {},
