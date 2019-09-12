@@ -8,10 +8,12 @@ import {
 } from '@/store/index'
 
 import Use from '@/store/module/use'
+import Table from '@/store/table'
 
 export default new Vuex.Store({
   state, mutations, actions, getters,
   modules: {
-    Use
+    Use,
+    Table
   }
 })

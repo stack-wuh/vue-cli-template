@@ -28,7 +28,29 @@ export default new Router({
             {
               path: '/st/index',
               meta: {
-                crubms: [{ _index: 0, name: '数据分析', path: '/st/index' }]
+                crubms: [
+                  { _index: 0, name: '数据分析', path: '/st/index' },
+                  { _index: 1, name: '数据统计', path: '/st/index' },
+                ]
+              },
+              component: () => import('@v/statisticManage/index/main.vue')
+            },
+            {
+              path: '/st/user',
+              meta: {
+                crubms: [
+                  { _index: 0, name: '数据分析', path: '/st/index' },
+                  { _index: 1, name: '用户分析', path: '/st/user' },
+                ]
+              },
+              component: () => import('@v/statisticManage/index/main.vue')
+            },{
+              path: '/st/book',
+              meta: {
+                crubms: [
+                  { _index: 0, name: '数据分析', path: '/st/index' },
+                  { _index: 1, name: '小说分析', path: '/st/book' },
+                ]
               },
               component: () => import('@v/statisticManage/index/main.vue')
             }
@@ -43,7 +65,10 @@ export default new Router({
             {
               path: '/order/index',
               meta: {
-                crubms: [{ _index: 0, name: '订单管理', path: '/order/index' }]
+                crubms: [
+                  { _index: 0, name: '订单管理', path: '/order' },
+                  { _index: 1, name: '订单列表', path: '/order/index' }
+                ]
               },
               component: () => import('@v/orderManage/index/main.vue')
             }
@@ -58,9 +83,23 @@ export default new Router({
             {
               path: '/user/index',
               meta: {
-                crubms: [{ _index: 0, name: '用户管理', path: '/user/index' }]
+                crubms: [
+                  { _index: 0, name: '用户管理', path: '/user' },
+                  { _index: 1, name: '用户列表', path: '/user/index' }
+                ]
               },
               component: () => import ('@v/userManage/index/main.vue')
+            },
+            {
+              path: '/user/detail',
+              meta: {
+                crubms: [
+                  { _index: 0, name: '用户管理', path: '/user' },
+                  { _index: 1, name: '用户列表', path: '/user/index' },
+                  { _index: 2, name: '用户详情', path: '/user/detail' },
+                ]
+              },
+              component: () => import ('@v/userManage/detail/main.vue')
             }
           ]
         },
