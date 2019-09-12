@@ -1,10 +1,10 @@
 <template>
   <section class='my-page'>
-    <transition name="slide">
       <el-card>
-        <router-view></router-view>
+        <transition name="slide" mode='out-in'>
+          <router-view></router-view>
+        </transition>
       </el-card>
-    </transition>
   </section>
 </template>
 

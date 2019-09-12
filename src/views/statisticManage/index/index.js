@@ -35,7 +35,7 @@ export const DowncardList = [
     ]
   },
   {
-    item: '积累数据',
+    item: '累技数据',
     icon: 'el-icon-top',
     list: [
       {
@@ -71,3 +71,73 @@ export const DowncardList = [
     ]
   }
 ]
+
+export const DowncardListForUser = [
+  {
+    item: '今日数据',
+    icon: 'el-icon-position',
+    list: [
+      {
+        name: '今日注册',
+        count: 0,
+        unit: '人'
+      },
+      {
+        name: '新用户付费人数',
+        count: 0,
+        unit: '人'
+      },
+      {
+        name: '转化率',
+        count: 0,
+        unit: '%'
+      }
+    ]
+  },
+  {
+    item: '累计数据',
+    icon: 'el-icon-top',
+    list: [
+      {
+        name: '累计注册',
+        count: 0,
+        unit: '人'
+      },
+      {
+        name: '累计付费人数',
+        count: 0,
+        unit: '%'
+      }
+    ]
+  }
+]
+
+export const DowncardListForBook = [
+    {
+      item: '累计数据',
+      icon: 'el-icon-top',
+      list: [
+        {
+          name: '男频书籍',
+          count: 0,
+          unit: '元'
+        },
+        {
+          name: '女频书籍',
+          count: 0,
+          unit: '元'
+        },
+        {
+          name: '短篇书籍',
+          count: 0,
+          unit: '元'
+        }
+      ]
+    }
+]
+
+export default {
+  dData: DowncardList,
+  dUser: DowncardListForUser,
+  dBook: DowncardListForBook
+}
