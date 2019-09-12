@@ -123,6 +123,9 @@ html, body, #app {
 .flex-wrap__column {
   flex-direction: column !important;
 }
+.flex-wrap__row-reverse {
+  flex-direction: row-reverse !important;
+}
 
 
 /** 背景图片设置 **/
@@ -163,4 +166,27 @@ html, body, #app {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+}
+
+/** transition **/
+.fade-enter,
+.fade-leave,
+.fade-leave-to {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: all .5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.slide-left-enter,
+.slide-left-leave,
+.slide-left-leave-to {
+  opacity: 0;
+  transform: translateX(20%);
+}
+.slide-left-enter-active,
+.slide-left-leave-active {
+  transition: all .5s cubic-bezier(0.215, 0.610, 0.355, 1);
 }
