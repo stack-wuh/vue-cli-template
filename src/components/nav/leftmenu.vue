@@ -4,6 +4,14 @@
       class="my-page-leftmenu__el-menu"
       :unique-opened="true"
       router>
+      <el-menu-item
+        v-for="(item, index) in menuItemList"
+        :key="item.name + index"
+        :index ="item.name + index"
+        :route="{path: item.path, query: item.query}">
+        <i :class="item.icon" class="el-icon-menu"></i>
+        <span>{{item.name}}</span>
+      </el-menu-item>
       <el-submenu
         v-for="(item, index) in subMenuList"
         :key="item.name + index"
@@ -16,19 +24,12 @@
         <el-menu-item
           v-for="(sub, sid) in item.child"
           :key="sub.name + sid"
-          :index="sub.name + sid">
+          :index="sub.name + sid"
+          :route="{ path: sub.path }">
           <i class="el-icon-shezhi"></i>
           <span>{{sub.name}}</span>
         </el-menu-item>
       </el-submenu>
-      <el-menu-item
-        v-for="(item, index) in menuItemList"
-        :key="item.name + index"
-        :index ="item.name + index"
-        :route="{path: item.path, query: item.query}">
-        <i :class="item.icon" class="el-icon-menu"></i>
-        <span>{{item.name}}</span>
-      </el-menu-item>
     </el-menu>
   </section>
 </template>

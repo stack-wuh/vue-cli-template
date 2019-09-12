@@ -1,12 +1,14 @@
 <template>
   <div class="c-downcard">
-    <div class="c-downcard__inner flex-wrap flex-wrap__column flex-main__center">
-      <p class="c-downcard__inner--title">{{title}}</p>
-      <p>
-        <strong>{{count}}</strong>&nbsp;
-        <span>{{unitText}}</span>
-      </p>
-    </div>
+    <transition name='fade' mode="out-in">
+      <div class="c-downcard__inner flex-wrap flex-wrap__column flex-main__center">
+        <p class="c-downcard__inner--title">{{title}}</p>
+        <p>
+          <strong>{{count}}</strong>&nbsp;
+          <span>{{unitText}}</span>
+        </p>
+      </div>
+    </transition>
   </div>
 </template>
 
@@ -18,15 +20,12 @@
     title: {
       required: true,
       type: String,
-      default: () => 'Title'
+      default: 'Title'
     },
     count: {
       required: true,
       type: [String, Number],
-      default: 0,
-      validator: (val) => {
-        return ![undefined, null].indexOf(val) !== -1
-      }
+      default: 0
     },
     unitText: {
       required: true,

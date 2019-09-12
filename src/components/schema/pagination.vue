@@ -54,6 +54,6 @@ export default {
 .pagination-wrapper{
   height: 40px !important;
   margin: 10px 0;
-  text-align: center;
+  text-align: right;
 }
 </style>

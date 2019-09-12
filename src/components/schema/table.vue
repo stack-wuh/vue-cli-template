@@ -57,12 +57,12 @@ export default {
   name: 'MyTable',
   components: {},
   computed: {
-    query(){
-      return this.$route.query.c || this.$route.query.f || this.$route.query.l
-    },
-    tableList(){
-      return table.find(kk => kk.params.includes(this.params || this.query))
-    }
+    // query(){
+    //   return this.$route.query.c || this.$route.query.f || this.$route.query.l
+    // },
+    // tableList(){
+    //   return table.find(kk => kk.params.includes(this.params || this.query))
+    // }
   },
   filters: {},
   data(){
