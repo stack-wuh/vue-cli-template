@@ -36,7 +36,7 @@
          <span 
           v-for="(bb, bid) in p.btns"
           :key="bid + 'btnid'">
-          <el-button v-bind="bb.props">{{bb.text}}</el-button>
+          <el-button @click="() => { bb.event({ _$route: $route, _$this: bb }) }" v-bind="bb.props">{{bb.text}}</el-button>
         </span>
         </el-table-column>
       </template>
@@ -103,8 +103,7 @@
     }
   },
   data(){
-    return {
-    }
+    return {}
   },
   methods: {
     ...mapMutations(['GET_TABLE_COLS'])

@@ -2,7 +2,8 @@ export const DowncardList = [
   {
     item: '今日数据',
     icon: 'el-icon-position',
-    list: [{
+    list: [
+      {
         name: '今日数据',
         count: 0,
         unit: '元'
@@ -35,7 +36,7 @@ export const DowncardList = [
     ]
   },
   {
-    item: '累技数据',
+    item: '累计数据',
     icon: 'el-icon-top',
     list: [
       {

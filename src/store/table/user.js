@@ -1,3 +1,7 @@
+import {
+  jump2Detail
+} from './events.js'
+
 export default  {
   name: '用户管理',
   matchAll: /^\/?user/,
@@ -47,7 +51,8 @@ export default  {
               text: '查看',
               props: {
                 type: 'text',
-              }
+              },
+              event: jump2Detail
             }
           ]
         },
