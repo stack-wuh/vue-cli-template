@@ -27,9 +27,7 @@
     }
   },
   methods: {},
-  created(){
-    console.log(this.$attrs)
-  },
+  created(){},
   mixins: []
  }
 </script>
